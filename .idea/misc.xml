@@ -3,27 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../layout/custom_preview.xml" value="0.2078125" />
-        <entry key="app/src/main/res/layout/activity_event_details.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/activity_event_details.xml" value="0.23550724637681159" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.254981884057971" />
         <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/content_welcome_screen.xml" value="0.254981884057971" />
-        <entry key="app/src/main/res/layout/event_info.xml" value="0.55" />
-        <entry key="app/src/main/res/layout/filter_sidebar.xml" value="0.1802536231884058" />
-        <entry key="app/src/main/res/layout/frag_log_in.xml" value="0.16894630192502533" />
-        <entry key="app/src/main/res/layout/frag_org_register.xml" value="0.16894630192502533" />
-        <entry key="app/src/main/res/layout/frag_user_org.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/content_welcome_screen.xml" value="0.23748790353968524" />
+        <entry key="app/src/main/res/layout/event_info.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/frag_log_in.xml" value="0.35410777658656023" />
+        <entry key="app/src/main/res/layout/frag_org_register.xml" value="0.182518115942029" />
+        <entry key="app/src/main/res/layout/frag_user_org.xml" value="0.182518115942029" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.254981884057971" />
-        <entry key="app/src/main/res/layout/fragment_event_details.xml" value="0.1802536231884058" />
-        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/fragment_event_details.xml" value="0.3330718994140625" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.254981884057971" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.254981884057971" />
-        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.16894630192502533" />
-        <entry key="app/src/main/res/layout/fragment_user_login.xml" value="0.16210739614994935" />
-        <entry key="app/src/main/res/layout/fragment_user_register.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/main_fragment.xml" value="0.1802536231884058" />
-        <entry key="app/src/main/res/layout/recycler_view_row.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1737229499264039" />
+        <entry key="app/src/main/res/layout/fragment_user_register.xml" value="0.2594926032467165" />
+        <entry key="app/src/main/res/layout/fragment_user_register_new.xml" value="0.23426329700659354" />
+        <entry key="app/src/main/res/layout/main_fragment.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/old_frag_log_in.xml" value="0.15070921985815602" />
       </map>
     </option>
   </component>
@@ -32,12 +29,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.16894630192502533" />
-      </ProjectState>
-    </option>
   </component>
 </project>
