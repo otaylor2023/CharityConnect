@@ -31,13 +31,13 @@ public class LogIn extends Fragment {
     {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.signupButton.setOnClickListener(new View.OnClickListener()
+        binding.signUpButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
                 NavHostFragment.findNavController(LogIn.this)
-                        .navigate(R.id.action_logIn_to_userRegisterFragment);
+                        .navigate(R.id.action_login_to_userRegisterFragment);
             }
         });
     }
