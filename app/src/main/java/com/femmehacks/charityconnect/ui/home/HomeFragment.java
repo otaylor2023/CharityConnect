@@ -1,5 +1,6 @@
 package com.femmehacks.charityconnect.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.femmehacks.charityconnect.EventDetailsActivity;
 import com.femmehacks.charityconnect.R;
 import com.femmehacks.charityconnect.databinding.FragmentHomeBinding;
 import com.femmehacks.charityconnect.storage.DriveType;
@@ -58,13 +60,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 testButtonPressed();
-                Intent intent = new Intent(getActivity(), AddNewContact.class);
+                Intent intent = new Intent(getActivity(), EventDetailsActivity.class);
                 startActivity(intent);
                 //dataList = LocalStorage.getContactList(root)
+            }
         });
 
         return root;
-    }
+    };
 
     @Override
     public void onDestroyView() {
