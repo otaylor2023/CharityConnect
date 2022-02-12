@@ -22,9 +22,11 @@
         android:layout_height="49dp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="92dp"
+        android:layout_marginEnd="17dp"
         android:text="──  Sign Up as User ──"
         android:textColor="#000000"
         android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
@@ -54,8 +56,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="45dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="420dp"
         android:text="Password:"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textInputLayout4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
@@ -65,8 +71,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="57dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="54dp"
         android:text="Email:"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toStartOf="@+id/textInputLayout3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -101,6 +111,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
         android:layout_width="227dp"
         android:layout_height="53dp"
         android:layout_marginStart="9dp"
