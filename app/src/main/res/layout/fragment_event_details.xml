@@ -20,7 +20,7 @@
         android:textSize="34sp" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/org_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -30,6 +30,7 @@
         android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/org_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -39,7 +40,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/org_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -49,7 +50,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/org_site"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -59,7 +60,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/org_social"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
@@ -69,7 +70,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/detail_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -89,7 +90,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/detail_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -99,7 +100,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/detail_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"

@@ -2,11 +2,17 @@ package com.femmehacks.charityconnect;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.femmehacks.charityconnect.storage.EventPOJO;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +25,7 @@ public class EventDetails extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String TAG = "femme.eventdetails";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -49,6 +56,7 @@ public class EventDetails extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -60,5 +68,15 @@ public class EventDetails extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_event_details, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        EventPOJO eventPOJO = (EventPOJO) getActivity().getIntent().getSerializableExtra("event");
+        TextView locationDetail = view.findViewById(R.id.detail_location);
+        locationDetail.setText(eventPOJO.getLocation());
+        Log.d(TAG, eventPOJO.toString());
     }
 }

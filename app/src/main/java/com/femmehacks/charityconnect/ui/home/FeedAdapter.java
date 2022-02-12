@@ -1,6 +1,7 @@
 package com.femmehacks.charityconnect.ui.home;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         EventPOJO eventData = eventList.get(position);
+        viewHolder.setClickListener(eventData);
         viewHolder.getEventTitleBox().setText(eventData.getTitle());
         viewHolder.getEventTitleBox().setText(String.format("Date: %s", eventData.getDate()));
         viewHolder.getEventTitleBox().setText(String.format("Type: %s", eventData.getDriveType()));
@@ -88,13 +90,6 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         public ViewHolder(View view) {
             super(view);
             this.view = view;
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(view.getContext(), EventDetailsActivity.class);
-                    view.getContext().startActivity(intent);
-                }
-            });
             // Define click listener for the ViewHolder's View
 
             eventTitleBox = view.findViewById(R.id.event_title);
@@ -104,6 +99,17 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
             pickUpBox = view.findViewById(R.id.has_pick_up);
             dropOffBox = view.findViewById(R.id.has_drop_off);
 
+        }
+
+        public void setClickListener(EventPOJO eventPOJO) {
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), EventDetailsActivity.class);
+                    intent.putExtra("event", eventPOJO);
+                    view.getContext().startActivity(intent);
+                }
+            });
         }
 
         public TextView getEventTitleBox() {
