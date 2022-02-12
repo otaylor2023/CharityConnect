@@ -17,6 +17,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView3"
+        android:layout_width="393dp"
+        android:layout_height="67dp"
+        android:text="Welcome to CharityConnect "
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
         android:id="@+id/textview_first"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -28,13 +44,13 @@
 
     <Button
         android:id="@+id/button_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
         android:layout_marginTop="272dp"
         android:text="User"
         android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@+id/textview_first"
-        tools:layout_editor_absoluteX="161dp" />
+        tools:layout_editor_absoluteX="135dp" />
 
     <Button
         android:id="@+id/button3"
@@ -43,5 +59,14 @@
         android:text="Organization"
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="341dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="127dp"
+        android:layout_height="35dp"
+        android:text="Sign up as..."
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="217dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
