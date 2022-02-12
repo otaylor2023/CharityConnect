@@ -1,9 +1,11 @@
 package com.femmehacks.charityconnect.utilities;
 import java.util.Date;
 
-public class Utils {
+public class Utils
+{
 
-    public static long dateDifference(Date d1) {
+    public static long dateDifference(Date d1)
+    {
         Date today = new Date();
         long difference_In_Time = today.getTime() - d1.getTime();
         // Calculate time difference
