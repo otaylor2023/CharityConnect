@@ -29,7 +29,9 @@ public class OrgPOJO {
     }
 
     public String getName() {return name;}
+
     public void setName(String name) {this.name = name;}
+
     public String getPhoneNumber() { return phoneNumber; }
 
     public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
@@ -42,7 +44,7 @@ public class OrgPOJO {
         this.email = email;
     }
 
-    public String website() {
+    public String getWebsite() {
         return website;
     }
 
