@@ -60,9 +60,10 @@ public class HomeFragment extends Fragment {
         binding.testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, "Test button pressed");
                 testButtonPressed();
-                Intent intent = new Intent(getActivity(), EventDetailsActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getActivity(), EventDetailsActivity.class);
+//                startActivity(intent);
                 //dataList = LocalStorage.getContactList(root)
             }
         });
@@ -78,7 +79,7 @@ public class HomeFragment extends Fragment {
 
     public void testButtonPressed() {
         OrgPOJO orgPOJO = new OrgPOJO("org", "982", "t333@gmail.com", "kff.com", "kfjf.d.");
-        EventPOJO eventPOJO = new EventPOJO("Test 1", new Date(), DriveType.CLOTHES, true, "street", orgPOJO);
+        EventPOJO eventPOJO = new EventPOJO("Test 1", new Date(), DriveType.CLOTHES, true, "street", "description",orgPOJO);
         ServerStorage.addEvent(eventPOJO);
 
         ServerStorage.getEvents(new OnEventsReceivedCallback() {
