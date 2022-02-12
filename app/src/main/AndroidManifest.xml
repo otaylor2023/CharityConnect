@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CharityConnect">
         <activity
-            android:name=".login2"
-            android:exported="false" />
-        <activity
             android:name=".WelcomeScreen"
             android:exported="true"
             android:label="@string/title_activity_welcome_screen"

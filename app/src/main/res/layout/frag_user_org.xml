@@ -23,8 +23,8 @@
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="197dp"
-        android:layout_marginLeft="150"
-        android:layout_marginTop="70"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="70dp"
         android:layout_weight="0"
         android:text="Sign in as... "
         android:textColor="#100E0E"
@@ -34,7 +34,7 @@
         android:id="@+id/userButton"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70"
+        android:layout_marginLeft="70dp"
         android:layout_weight="0"
         android:text="User" />
 
@@ -42,8 +42,8 @@
         android:id="@+id/orgButton"
         android:layout_width="259dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70"
-        android:layout_marginTop="50"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
         android:layout_weight="0"
         android:text="Organization" />
 
