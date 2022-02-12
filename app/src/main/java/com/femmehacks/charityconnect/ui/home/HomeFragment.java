@@ -35,7 +35,8 @@ public class HomeFragment extends Fragment {
     private FeedAdapter adapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             ViewGroup container, Bundle savedInstanceState)
+    {
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
@@ -57,7 +58,9 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 testButtonPressed();
-            }
+                Intent intent = new Intent(getActivity(), AddNewContact.class);
+                startActivity(intent);
+                //dataList = LocalStorage.getContactList(root)
         });
 
         return root;
