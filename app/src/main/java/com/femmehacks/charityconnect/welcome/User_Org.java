@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.femmehacks.charityconnect.R;
-import com.femmehacks.charityconnect.databinding.FragmentFirstBinding;
+import com.femmehacks.charityconnect.databinding.FragUserOrgBinding;
 
-public class FirstFragment extends Fragment {
+public class User_Org extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragUserOrgBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +22,7 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragUserOrgBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -33,7 +33,7 @@ public class FirstFragment extends Fragment {
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
+                NavHostFragment.findNavController(User_Org.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
