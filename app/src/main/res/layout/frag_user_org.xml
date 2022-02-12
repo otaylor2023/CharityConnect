@@ -20,13 +20,19 @@
         android:id="@+id/textView3"
         android:layout_width="393dp"
         android:layout_height="67dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="51dp"
         android:text="Welcome to CharityConnect "
         android:textColor="#000000"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="99dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -46,27 +52,42 @@
         android:id="@+id/user_button"
         android:layout_width="154dp"
         android:layout_height="50dp"
+        android:layout_marginStart="135dp"
         android:layout_marginTop="340dp"
+        android:layout_marginEnd="122dp"
         android:text="User"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first"
-        tools:layout_editor_absoluteX="135dp" />
+        app:layout_constraintBottom_toTopOf="@+id/org_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
     <Button
         android:id="@+id/org_button"
         android:layout_width="153dp"
         android:layout_height="50dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="257dp"
         android:text="Organization"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="424dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_button" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="100dp"
         android:layout_height="31dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="92dp"
         android:text="Sign up as..."
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="217dp" />
+        app:layout_constraintBottom_toTopOf="@+id/user_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
