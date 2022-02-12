@@ -10,17 +10,19 @@ public class EventPOJO implements Serializable {
     private DriveType driveType;
     private boolean hasPickup;
     private String location;
+    private String description;
     private OrgPOJO orgPOJO;
 
 
     public EventPOJO() {}
 
-    public EventPOJO(String title, Date date, DriveType driveType, boolean hasPickup, String location, OrgPOJO orgPOJO) {
+    public EventPOJO(String title, Date date, DriveType driveType, boolean hasPickup, String location, String description, OrgPOJO orgPOJO) {
         this.title = title;
         this.date = date;
         this.driveType = driveType;
         this.hasPickup = hasPickup;
         this.location = location;
+        this.description = description;
         this.orgPOJO = orgPOJO;
     }
 
@@ -30,6 +32,7 @@ public class EventPOJO implements Serializable {
         this.driveType = e.driveType;
         this.hasPickup = e.hasPickup;
         this.location = e.location;
+        this.description = e.description;
         this.orgPOJO = e.orgPOJO;
     }
 
@@ -68,6 +71,10 @@ public class EventPOJO implements Serializable {
     public void setHasPickup(boolean hasPickup) {
         this.hasPickup = hasPickup;
     }
+
+    public String getDescription() {return this.description;}
+
+    public void setDescription(String description) {this.description = description;}
 
 
     @Override
