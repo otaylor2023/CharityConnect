@@ -5,13 +5,46 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".welcome.User_Org" >
+    android:orientation="vertical"
+    tools:context=".welcome.User_Org">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_weight="1"
-        android:text="Welcome to Char" />
+        android:layout_marginTop="100dp"
+        android:layout_weight="0"
+        android:text="  Welcome to CharityConnect"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="197dp"
+        android:layout_marginLeft="150"
+        android:layout_marginTop="70"
+        android:layout_weight="0"
+        android:text="Sign in as... "
+        android:textColor="#100E0E"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70"
+        android:layout_weight="0"
+        android:text="User" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70"
+        android:layout_marginTop="50"
+        android:layout_weight="0"
+        android:text="Organization" />
+
 </LinearLayout>
