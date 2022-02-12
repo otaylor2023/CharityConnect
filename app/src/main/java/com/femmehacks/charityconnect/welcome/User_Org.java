@@ -27,14 +27,17 @@ public class User_Org extends Fragment {
 
     }
 
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState)
+    {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.userButton.setOnClickListener(new View.OnClickListener() {
+        binding.userButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 NavHostFragment.findNavController(User_Org.this)
-                        .navigate(R.id.action_User_Org_to_logIn);
+                        .navigate(R.id.action_User_Org_to_login);
             }
         });
     }
