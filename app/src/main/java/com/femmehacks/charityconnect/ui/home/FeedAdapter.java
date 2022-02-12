@@ -1,5 +1,6 @@
 package com.femmehacks.charityconnect.ui.home;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.femmehacks.charityconnect.EventDetailsActivity;
 import com.femmehacks.charityconnect.R;
 import com.femmehacks.charityconnect.storage.EventPOJO;
 import com.femmehacks.charityconnect.storage.OnEventsReceivedCallback;
@@ -86,6 +88,13 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         public ViewHolder(View view) {
             super(view);
             this.view = view;
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), EventDetailsActivity.class);
+                    view.getContext().startActivity(intent);
+                }
+            });
             // Define click listener for the ViewHolder's View
 
             eventTitleBox = view.findViewById(R.id.event_title);

@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".EventDetailsActivity">
 
+    <include layout="@layout/fragment_event_details" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
