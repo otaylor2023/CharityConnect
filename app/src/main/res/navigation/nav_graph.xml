@@ -3,26 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/User_Org">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.femmehacks.charityconnect.welcome.FirstFragment"
+        android:id="@+id/User_Org"
+        android:name="com.femmehacks.charityconnect.welcome.User_Org"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        tools:layout="@layout/frag_user_org">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_User_Org_to_logIn"
+            app:destination="@id/logIn" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.femmehacks.charityconnect.welcome.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/userRegisterFragment"
+        android:name="com.femmehacks.charityconnect.UserRegisterFragment"
+        android:label="fragment_user_register"
+        tools:layout="@layout/fragment_user_register" />
+    <fragment
+        android:id="@+id/logIn"
+        android:name="com.femmehacks.charityconnect.welcome.LogIn"
+        android:label="frag_log_in"
+        tools:layout="@layout/frag_log_in" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_logIn_to_userRegisterFragment"
+            app:destination="@id/userRegisterFragment" />
     </fragment>
 </navigation>
