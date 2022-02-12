@@ -31,7 +31,7 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/userButton"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70"
@@ -39,7 +39,7 @@
         android:text="User" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/orgButton"
         android:layout_width="259dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70"

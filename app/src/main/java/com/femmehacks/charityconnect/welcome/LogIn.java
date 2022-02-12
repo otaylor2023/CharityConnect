@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.femmehacks.charityconnect.R;
-import com.femmehacks.charityconnect.databinding.FragLogInBinding;
+import com.femmehacks.charityconnect.databinding.FragmentLoginBinding;
 
 public class LogIn extends Fragment {
 
-    private FragLogInBinding binding;
+    private FragmentLoginBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +22,7 @@ public class LogIn extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragLogInBinding.inflate(inflater, container, false);
+        binding = FragmentLoginBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -30,7 +30,6 @@ public class LogIn extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
-
         binding.signUpButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
