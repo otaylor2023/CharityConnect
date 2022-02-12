@@ -36,7 +36,9 @@
         android:layout_height="48dp"
         android:layout_marginEnd="67dp"
         android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/green"
         android:text="@string/sign_up"
+        android:textColor="#0E0D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" /><![CDATA[
         app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +123,9 @@
         android:layout_height="48dp"
         android:layout_marginStart="46dp"
         android:layout_marginBottom="39dp"
+        android:backgroundTint="@color/green"
         android:text="@string/log_in"
+        android:textColor="#151313"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
 

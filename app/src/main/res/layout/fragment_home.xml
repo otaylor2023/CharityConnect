@@ -22,7 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:text="Details" />
+        android:backgroundTint="@color/green"
+        android:text="Details"
+        android:textColor="#0B0A0A" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

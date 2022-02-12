@@ -36,7 +36,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="70dp"
         android:layout_weight="0"
-        android:text="User" />
+        android:backgroundTint="@color/green"
+        android:text="User"
+        android:textColor="#0B0A0A" />
 
     <Button
         android:id="@+id/orgButton"
@@ -45,6 +47,8 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="50dp"
         android:layout_weight="0"
-        android:text="Organization" />
+        android:backgroundTint="@color/green"
+        android:text="Organization"
+        android:textColor="#020202" />
 
 </LinearLayout>
