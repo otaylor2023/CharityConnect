@@ -8,19 +8,28 @@ public class EventPOJO {
     private Date date;
     private DriveType driveType;
     private boolean hasPickup;
-    private boolean hasDropoff;
+    private String location;
 
     public EventPOJO() {}
 
-    public EventPOJO(String title, Date date, DriveType driveType, boolean hasPickup, boolean hasDropoff) {
+    public EventPOJO(String title, Date date, DriveType driveType, boolean hasPickup, String location) {
         this.title = title;
         this.date = date;
         this.driveType = driveType;
         this.hasPickup = hasPickup;
-        this.hasDropoff = hasDropoff;
+        this.location = location;
     }
 
+    public EventPOJO(EventPOJO e) {
+        this.title = e.title;
+        this.date = e.date;
+        this.driveType = e.driveType;
+        this.hasPickup = e.hasPickup;
+        this.location = e.location;
+    }
 
+    public String getLocation() {return location;}
+    public String setLocation(String location) {return this.location = location;}
     public String getTitle() {
         return title;
     }
@@ -53,11 +62,15 @@ public class EventPOJO {
         this.hasPickup = hasPickup;
     }
 
-    public boolean hasDropoff() {
-        return hasDropoff;
-    }
 
-    public void setHasDropoff(boolean hasDropoff) {
-        this.hasDropoff = hasDropoff;
+    @Override
+    public String toString() {
+        return "EventPOJO{" +
+                "title='" + title + '\'' +
+                ", date=" + date +
+                ", driveType=" + driveType +
+                ", hasPickup=" + hasPickup +
+                ", location=" + location +
+                '}';
     }
 }

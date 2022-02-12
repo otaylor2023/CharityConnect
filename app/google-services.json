@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "287124931636",
+    "firebase_url": "https://charityconnect-5b780-default-rtdb.firebaseio.com",
+    "project_id": "charityconnect-5b780",
+    "storage_bucket": "charityconnect-5b780.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287124931636:android:a4da690772b38c7d43f661",
+        "android_client_info": {
+          "package_name": "com.femmehacks.charityconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287124931636-o226lqdvfl8f6jb5bmscmrpvuskpc250.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI80U7eAer-HPbm4inEO7JxIkYgHMzTGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287124931636-o226lqdvfl8f6jb5bmscmrpvuskpc250.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
