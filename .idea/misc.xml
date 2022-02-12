@@ -9,13 +9,14 @@
         <entry key="app/src/main/res/layout/event_info.xml" value="0.25" />
         <entry key="app/src/main/res/layout/frag_log_in.xml" value="0.3229216740848808" />
         <entry key="app/src/main/res/layout/frag_org_register.xml" value="0.13145896656534956" />
-        <entry key="app/src/main/res/layout/frag_user_org.xml" value="0.13145896656534956" />
+        <entry key="app/src/main/res/layout/frag_user_org.xml" value="0.2569579289676933" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.13145896656534956" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3249526189090995" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.4185240593509398" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.13145896656534956" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_user_register.xml" value="0.13145896656534956" />
+        <entry key="app/src/main/res/layout/fragment_welcome_page.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/login2_activity.xml" value="0.161231884057971" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/recycler_view_row.xml" value="0.3310745239257813" />
