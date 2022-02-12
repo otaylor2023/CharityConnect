@@ -36,7 +36,7 @@
         android:layout_height="48dp"
         android:layout_marginEnd="67dp"
         android:layout_marginBottom="10dp"
-        android:text="Sign up"
+        android:text="@string/sign_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" /><![CDATA[
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="63dp"
         android:layout_marginBottom="23dp"
-        android:text="If you dont have an account, "
+        android:text="@string/if_you_dont_have_an_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -94,7 +94,7 @@
         android:layout_marginTop="127dp"
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="51dp"
-        android:text="Email: "
+        android:text="@string/email"
         android:textColor="#020202"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
@@ -121,7 +121,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="46dp"
         android:layout_marginBottom="39dp"
-        android:text="Log in"
+        android:text="@string/log_in"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
 
