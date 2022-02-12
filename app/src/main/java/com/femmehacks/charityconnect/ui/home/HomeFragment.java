@@ -22,6 +22,7 @@ import com.femmehacks.charityconnect.databinding.FragmentHomeBinding;
 import com.femmehacks.charityconnect.storage.DriveType;
 import com.femmehacks.charityconnect.storage.EventPOJO;
 import com.femmehacks.charityconnect.storage.OnEventsReceivedCallback;
+import com.femmehacks.charityconnect.storage.OrgPOJO;
 import com.femmehacks.charityconnect.storage.ServerStorage;
 
 import java.util.Date;
@@ -76,7 +77,8 @@ public class HomeFragment extends Fragment {
     }
 
     public void testButtonPressed() {
-        EventPOJO eventPOJO = new EventPOJO("Test 1", new Date(), DriveType.CLOTHES, true, "street");
+        OrgPOJO orgPOJO = new OrgPOJO("org", "982", "t333@gmail.com", "kff.com", "kfjf.d.");
+        EventPOJO eventPOJO = new EventPOJO("Test 1", new Date(), DriveType.CLOTHES, true, "street", orgPOJO);
         ServerStorage.addEvent(eventPOJO);
 
         ServerStorage.getEvents(new OnEventsReceivedCallback() {
