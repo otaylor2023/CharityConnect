@@ -111,11 +111,14 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="203dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="100dp"
         android:layout_marginRight="150dp"
-        android:text="Back" />
+        android:backgroundTint="@color/green"
+        android:text="Add to Calendar"
+        android:textColor="#131212" />
 
 </LinearLayout>
