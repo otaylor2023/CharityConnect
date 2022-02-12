@@ -15,13 +15,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="247dp"
-        android:layout_height="51dp"
-        android:text="Sign Up as User"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="84dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
