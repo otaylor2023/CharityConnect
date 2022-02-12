@@ -37,7 +37,7 @@ public class User_Org extends Fragment {
             public void onClick(View view)
             {
                 NavHostFragment.findNavController(User_Org.this)
-                        .navigate(R.id.action_User_Org_to_login);
+                        .navigate(R.id.action_User_Org_to_LogIn);
             }
         });
     }

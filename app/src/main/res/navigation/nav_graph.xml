@@ -11,8 +11,8 @@
         android:label="@string/first_fragment_label"
         tools:layout="@layout/frag_user_org">
         <action
-            android:id="@+id/action_User_Org_to_login"
-            app:destination="@id/login" />
+            android:id="@+id/action_User_Org_to_LogIn"
+            app:destination="@id/LogIn" />
     </fragment>
     <fragment
         android:id="@+id/userRegisterFragment"
@@ -20,10 +20,10 @@
         android:label="fragment_user_register"
         tools:layout="@layout/fragment_user_register" />
     <fragment
-        android:id="@+id/login"
+        android:id="@+id/LogIn"
         android:name="com.femmehacks.charityconnect.Login"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_login_to_userRegisterFragment"
             app:destination="@id/userRegisterFragment" />

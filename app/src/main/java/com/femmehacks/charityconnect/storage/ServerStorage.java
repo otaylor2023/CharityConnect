@@ -85,53 +85,53 @@ public class ServerStorage {
 
     }
 
-//    public static void attemptSignIn(String username, String unhashedPassword, OnLoginCheckedCallback loginCheckedCallback) {
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference reference = database.getReference();
-//        Query query = reference.child(Storage.LOGIN_STORAGE.path).orderByKey();
-//        Task<DataSnapshot> snapshotTask = query.get();
-//        snapshotTask.addOnSuccessListener(new OnSuccessListener<DataSnapshot>() {
-//            @Override
-//            public void onSuccess(@NonNull DataSnapshot dataSnapshot) {
-//                HashMap<String, EventPOJO> userDataList;
-//                Log.d(TAG, "success");
-//                GenericTypeIndicator<HashMap<String, Eve>> typeIndicator = new GenericTypeIndicator<HashMap<String, OrgPOJO>>() {};
-//                userDataList = dataSnapshot.getValue(typeIndicator);
-//                OrgPOJO match = ServerStorage.checkForMatch(username, unhashedPassword, userDataList);
-//                loginCheckedCallback.onLoginChecked(match);
-//            }
-//        });
-//    }
+    public static void attemptSignIn(String username, String unhashedPassword, OnLoginCheckedCallback loginCheckedCallback) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference();
+        Query query = reference.child(Storage.USER_LOGIN_STORAGE.path).orderByKey();
+        Task<DataSnapshot> snapshotTask = query.get();
+        snapshotTask.addOnSuccessListener(new OnSuccessListener<DataSnapshot>() {
+            @Override
+            public void onSuccess(@NonNull DataSnapshot dataSnapshot) {
+                HashMap<String, UserPOJO> userDataList;
+                Log.d(TAG, "success");
+                GenericTypeIndicator<HashMap<String, UserPOJO>> typeIndicator = new GenericTypeIndicator<HashMap<String, UserPOJO>>() {};
+                userDataList = dataSnapshot.getValue(typeIndicator);
+                UserPOJO match = ServerStorage.checkForMatch(username, unhashedPassword, userDataList);
+                loginCheckedCallback.onLoginChecked(match);
+            }
+        });
+    }
+
+    /**
+     * Checks the user data list for a match and returns the match or null if there isnt one
+     * @param username the username to check
+     * @param unhashedPassword the unhashed password
+     * @param userDataList the user data list
+     * @return the match if a match is found, otherwise a null object
+     */
+    private static UserPOJO checkForMatch(String username, String unhashedPassword, HashMap<String, UserPOJO> userDataList) {
+        if (userDataList != null) {
+            UserPOJO match = userDataList.get(username);
+            if (match != null && match.checkPassword(unhashedPassword)) {
+                return match;
+            }
+        }
+        return null;
+    }
 //
-//    /**
-//     * Checks the user data list for a match and returns the match or null if there isnt one
-//     * @param username the username to check
-//     * @param unhashedPassword the unhashed password
-//     * @param userDataList the user data list
-//     * @return the match if a match is found, otherwise a null object
-//     */
-//    private static OrgPOJO checkForMatch(String username, String unhashedPassword, HashMap<String, OrgPOJO> userDataList) {
-//        if (userDataList != null) {
-//            OrgPOJO match = userDataList.get(username);
-//            if (match != null && match.checkPassword(unhashedPassword)) {
-//                return match;
-//            }
-//        }
-//        return null;
-//    }
-//
-//    public static void addOrganization(OrgPOJO orgPOJO) {
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference reference = database.getReference();
-//        String key = orgPOJO.getUsername();
-//        Map<String, Object> map = new HashMap<>();
-//        map.put(key, orgPOJO);
-//        reference.child(Storage.LOGIN_STORAGE.path).updateChildren(map);
-//    }
+    public static void addUser(UserPOJO userPOJO) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference();
+        String key = userPOJO.getEmail();
+        Map<String, Object> map = new HashMap<>();
+        map.put(key, userPOJO);
+        reference.child(Storage.USER_LOGIN_STORAGE.path).updateChildren(map);
+    }
 
     public enum Storage {
         EVENT_STORAGE("eventStorage"),
-        LOGIN_STORAGE("loginStorage");
+        USER_LOGIN_STORAGE("userLoginStorage");
 
         public final String path;
 

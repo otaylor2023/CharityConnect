@@ -24,18 +24,27 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName"
+        <TextView
+            android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text="Name:"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/signup_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
-
+            android:inputType="textEmailAddress" />
     </LinearLayout>
 
     <LinearLayout
@@ -55,7 +64,7 @@
             android:textSize="18dp" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress11"
+            android:id="@+id/signup_email"
             android:layout_width="316dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
@@ -81,7 +90,7 @@
             android:textSize="18dp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/signup_password"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
@@ -99,7 +108,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/signup_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
