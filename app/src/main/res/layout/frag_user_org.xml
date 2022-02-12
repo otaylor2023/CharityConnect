@@ -2,27 +2,71 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".welcome.User_Org">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="welcome"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+    <Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textview_first"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_first"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="393dp"
+        android:layout_height="67dp"
+        android:text="Welcome to CharityConnect "
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textview_first"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:text="Welcome to CharityConnect!"
+        app:layout_constraintBottom_toTopOf="@+id/button_first"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="154dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="340dp"
+        android:text="User"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/textview_first"
+        tools:layout_editor_absoluteX="135dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="153dp"
+        android:layout_height="50dp"
+        android:text="Organization"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="424dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="100dp"
+        android:layout_height="31dp"
+        android:text="Sign up as..."
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="217dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
