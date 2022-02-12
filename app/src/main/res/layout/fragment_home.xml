@@ -7,6 +7,23 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="355dp"
+        android:layout_height="49dp"
+        android:gravity="center"
+        android:text="─  Find Your Drive! ─"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,4 +36,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:layout_width="184dp"
+        android:layout_height="55dp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="187dp" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="112dp"
+        android:layout_height="191dp"
+        tools:layout_editor_absoluteX="246dp"
+        tools:layout_editor_absoluteY="270dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
