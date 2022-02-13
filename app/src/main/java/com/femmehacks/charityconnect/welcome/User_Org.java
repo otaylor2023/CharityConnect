@@ -40,6 +40,16 @@ public class User_Org extends Fragment {
                         .navigate(R.id.action_User_Org_to_LogIn);
             }
         });
+
+        binding.orgButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                NavHostFragment.findNavController(User_Org.this)
+                        .navigate(R.id.action_User_Org_to_LogIn);
+            }
+        });
     }
 
     @Override

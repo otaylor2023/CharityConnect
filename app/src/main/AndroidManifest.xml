@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CharityConnect">
         <activity
+            android:name=".OrganizationAddActvity"
+            android:exported="false" />
+        <activity
             android:name=".WelcomeScreen"
             android:exported="true"
             android:label="@string/title_activity_welcome_screen"
@@ -19,17 +22,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name">
-
-        </activity>
-        <activity android:name=".EventDetailsActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".EventDetailsActivity"
             android:exported="true"
-            android:label="EventDetails"></activity>
+            android:label="EventDetails" />
     </application>
 
 </manifest>

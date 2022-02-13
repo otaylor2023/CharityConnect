@@ -24,7 +24,9 @@ import com.femmehacks.charityconnect.storage.EventPOJO;
 import com.femmehacks.charityconnect.storage.OnEventsReceivedCallback;
 import com.femmehacks.charityconnect.storage.OrgPOJO;
 import com.femmehacks.charityconnect.storage.ServerStorage;
+import com.femmehacks.charityconnect.storage.UserPOJO;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import java.util.List;
 
@@ -42,6 +44,7 @@ public class HomeFragment extends Fragment {
     {
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
+        
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -79,8 +82,19 @@ public class HomeFragment extends Fragment {
 
     public void testButtonPressed() {
         OrgPOJO orgPOJO = new OrgPOJO("org", "982", "t333@gmail.com", "kff.com", "kfjf.d.");
-        EventPOJO eventPOJO = new EventPOJO("Test 1", new Date(), DriveType.CLOTHES, true, "street", "description",orgPOJO);
+        EventPOJO eventPOJO = new EventPOJO("Test 1", "February 12, 2022", "Clothes drive", true, "street", "description",orgPOJO);
         ServerStorage.addEvent(eventPOJO);
+
+        UserPOJO userPOJO = new UserPOJO();
+        userPOJO.setEmail("okt");
+        try {
+            userPOJO.setHashedPassword(UserPOJO.encodeSHA256("password"));
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+
+        userPOJO.setDisplayName("Local Charity");
+        ServerStorage.addOrg(userPOJO);
 
         ServerStorage.getEvents(new OnEventsReceivedCallback() {
             @Override

@@ -98,7 +98,25 @@ public class ServerStorage {
                 GenericTypeIndicator<HashMap<String, UserPOJO>> typeIndicator = new GenericTypeIndicator<HashMap<String, UserPOJO>>() {};
                 userDataList = dataSnapshot.getValue(typeIndicator);
                 UserPOJO match = ServerStorage.checkForMatch(username, unhashedPassword, userDataList);
-                loginCheckedCallback.onLoginChecked(match);
+                loginCheckedCallback.onLoginChecked(match, false);
+            }
+        });
+    }
+
+    public static void attemptOrgSignIn(String username, String unhashedPassword, OnLoginCheckedCallback loginCheckedCallback) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference();
+        Query query = reference.child(Storage.ORG_LOGIN_STORAGE.path).orderByKey();
+        Task<DataSnapshot> snapshotTask = query.get();
+        snapshotTask.addOnSuccessListener(new OnSuccessListener<DataSnapshot>() {
+            @Override
+            public void onSuccess(@NonNull DataSnapshot dataSnapshot) {
+                HashMap<String, UserPOJO> userDataList;
+                Log.d(TAG, "success");
+                GenericTypeIndicator<HashMap<String, UserPOJO>> typeIndicator = new GenericTypeIndicator<HashMap<String, UserPOJO>>() {};
+                userDataList = dataSnapshot.getValue(typeIndicator);
+                UserPOJO match = ServerStorage.checkForMatch(username, unhashedPassword, userDataList);
+                loginCheckedCallback.onLoginChecked(match, true);
             }
         });
     }
@@ -129,9 +147,19 @@ public class ServerStorage {
         reference.child(Storage.USER_LOGIN_STORAGE.path).updateChildren(map);
     }
 
+    public static void addOrg(UserPOJO userPOJO) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference();
+        String key = userPOJO.getEmail();
+        Map<String, Object> map = new HashMap<>();
+        map.put(key, userPOJO);
+        reference.child(Storage.ORG_LOGIN_STORAGE.path).updateChildren(map);
+    }
+
     public enum Storage {
         EVENT_STORAGE("eventStorage"),
-        USER_LOGIN_STORAGE("userLoginStorage");
+        USER_LOGIN_STORAGE("userLoginStorage"),
+        ORG_LOGIN_STORAGE("orgLoginStorage");
 
         public final String path;
 

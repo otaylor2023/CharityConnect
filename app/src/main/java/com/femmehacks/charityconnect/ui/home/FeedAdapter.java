@@ -55,10 +55,11 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         EventPOJO eventData = eventList.get(position);
         viewHolder.setClickListener(eventData);
         viewHolder.getEventTitleBox().setText(eventData.getTitle());
-        viewHolder.getEventTitleBox().setText(String.format("Date: %s", eventData.getDate()));
-        viewHolder.getEventTitleBox().setText(String.format("Type: %s", eventData.getDriveType()));
-        viewHolder.getEventTitleBox().setText(String.format("Location: %s", eventData.getLocation()));
-        viewHolder.getEventTitleBox().setText(String.format("Home pickup? %s", eventData.hasPickup() ? "Yes" : "No"));
+        viewHolder.getDateBox().setText(String.format("Date: %s", eventData.getDate()));
+        viewHolder.getEventTypeBox().setText(String.format("Type: %s", eventData.getDriveType()));
+        viewHolder.getLocationBox().setText(String.format("Location: %s", eventData.getLocation()));
+        viewHolder.getPickUpBox().setVisibility(View.INVISIBLE);
+        viewHolder.getDropOffBox().setVisibility(View.INVISIBLE);
 
     }
 

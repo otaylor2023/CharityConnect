@@ -2,10 +2,11 @@ package com.femmehacks.charityconnect.storage;
 
 import android.util.Base64;
 
+import java.io.Serializable;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class UserPOJO {
+public class UserPOJO implements Serializable {
 
     private String email;
     private String hashedPassword;
@@ -52,7 +53,7 @@ public class UserPOJO {
         return email;
     }
 
-    public void setEmail(String username) {
+    public void setEmail(String email) {
         this.email = email;
     }
 

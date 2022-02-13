@@ -6,8 +6,8 @@ import java.util.Date;
 public class EventPOJO implements Serializable {
 
     private String title;
-    private Date date;
-    private DriveType driveType;
+    private String date;
+    private String driveType;
     private boolean hasPickup;
     private String location;
     private String description;
@@ -16,7 +16,7 @@ public class EventPOJO implements Serializable {
 
     public EventPOJO() {}
 
-    public EventPOJO(String title, Date date, DriveType driveType, boolean hasPickup, String location, String description, OrgPOJO orgPOJO) {
+    public EventPOJO(String title, String date, String driveType, boolean hasPickup, String location, String description, OrgPOJO orgPOJO) {
         this.title = title;
         this.date = date;
         this.driveType = driveType;
@@ -48,19 +48,19 @@ public class EventPOJO implements Serializable {
         this.title = title;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public DriveType getDriveType() {
+    public String getDriveType() {
         return driveType;
     }
 
-    public void setDriveType(DriveType driveType) {
+    public void setDriveType(String driveType) {
         this.driveType = driveType;
     }
 

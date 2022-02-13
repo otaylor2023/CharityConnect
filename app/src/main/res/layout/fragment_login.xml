@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="50dp"
-            android:text="Email:"
+            android:text="Username:"
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -64,9 +64,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:layout_weight="0"
-            android:inputType="textEmailAddress" />
+            android:inputType="textPassword"
+            android:password="true" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/invalid_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Invalid username or password"
+        android:textColor="@color/design_default_color_error"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/logInButton"

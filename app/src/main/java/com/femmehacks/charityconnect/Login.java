@@ -1,5 +1,6 @@
 package com.femmehacks.charityconnect;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,13 +47,42 @@ public class Login extends Fragment {
                 String password = ((EditText)getView().findViewById(R.id.login_user_password)).getText().toString();
                 ServerStorage.attemptSignIn(email, password, new OnLoginCheckedCallback() {
                     @Override
-                    public void onLoginChecked(UserPOJO match) {
-                        if (match != null)
+                    public void onLoginChecked(UserPOJO match, boolean isOrg) {
+                        if (match != null) {
                             Log.d(TAG, "success");
-                        else
-                            Log.d(TAG, "invalid pass");
+                            if (!isOrg) {
+                                Intent intent = new Intent(getActivity(), MainActivity.class);
+                                intent.putExtra("user", match);
+                                startActivity(intent);
+                            }
+
+                        }
+                        else {
+                            ServerStorage.attemptOrgSignIn(email, password, new OnLoginCheckedCallback() {
+                                @Override
+                                public void onLoginChecked(UserPOJO match, boolean isOrg) {
+                                    if (match != null) {
+                                        Log.d(TAG, "success");
+                                        Intent intent = new Intent(getActivity(), OrganizationAddActvity.class);
+                                        intent.putExtra("user", match);
+                                        startActivity(intent);
+
+                                    }
+                                    else {
+                                        Log.d(TAG, "invalid pass");
+                                        getView().findViewById(R.id.invalid_pass).setVisibility(View.VISIBLE);
+                                    }
+                                }
+                            });
+                        }
                     }
                 });
+
+
+
+
+
+
 
             }
         });
